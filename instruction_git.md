@@ -38,4 +38,4 @@ git 命令：
 状态：git status                                       //查看工作区、暂存区状态
 添加：git add [filename]			       //将工作区的“新建/修改”添加到暂存区
 提交：git commit -m "commit message" [filename]	       //将暂存区的内容提交到本地库
-
+日志：git log					       //查看提交日志
