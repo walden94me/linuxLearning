@@ -28,4 +28,7 @@
 6.追踪文件，添加到缓存区
   git add filename 		//将文件添加到暂存区
   git rm --cache filename 	//将文件移出暂存区
-
+7.提交到本地库
+  git commit filename   //提交操作
+  提交完成后自动进入vim编辑模式，可以在第一行备注提交信息。
+  
