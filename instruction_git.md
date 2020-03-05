@@ -39,3 +39,7 @@ git 命令：
 添加：git add [filename]			       //将工作区的“新建/修改”添加到暂存区
 提交：git commit -m "commit message" [filename]	       //将暂存区的内容提交到本地库
 日志：git log					       //查看提交日志
+      多屏显示控制方式：空格 向下翻页； b 向上翻页； q 退出。
+      git log --pretty=oneline    	//简洁显示日志
+      git log --oneline			//简洁显示日志（简洁的哈希值）
+      git reflog			//oneline版本增加了移动版本需要的步数
