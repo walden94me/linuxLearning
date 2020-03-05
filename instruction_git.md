@@ -51,6 +51,30 @@
   	git reset --hard HEAD~5
 	~后面的数字，表示后退步数，上面的优化版
 
+  删除文件并找回
+  	前提：删除前，文件存在时的状态已经被提交到本地库
+  	操作：git reset --hard [已经存在的指针处]
+  
+  文件比较：
+  	git diff [文件名]   			//将工作区和暂存区的文件进行比较
+	git diff [本地库中历史版本] [文件名]	//将工作区和本地库历史记录进行比较
+	不带文件名可以比较库中的所有文件
+
+10.分支操作
+  创建分支：
+	git branch [分支名]
+  查看分支：
+  	git branch -v
+  切换分支：
+  	git checkout [分支名]
+  合并分支：
+  	第一步：切换到接受修改的分支上（被合并，需要增加新内容的老分支）
+		git checkout [分支名]
+		git checkout master   //切换到主分支，准备添加版本1的内容
+	第二步：执行 merge 命令
+		git merge [分支名] （做出修改的新分支）
+		git merge banben1     //将版本1的内容加入到 master 分支
+
 ----------------------------------------------------------
 
 git 命令：
@@ -66,3 +90,11 @@ git 命令：
       git log --pretty=oneline    	//简洁显示日志
       git log --oneline			//简洁显示日志（简洁的哈希值）
       git reflog			//oneline版本增加了移动版本需要的步数
+
+版本切换：git reset --hard [局部哈希值]  或者
+	  git reset --hard HEAD^^^	 或者
+	  git reset --hard HEAD~2
+
+比较：git diff [文件名]
+      git diff [某个历史版本] [文件名]
+      git diff HEAD~2 filename 
