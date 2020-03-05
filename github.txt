@@ -1,0 +1,19 @@
+github远程操作
+1.记录github仓库远程地址，复制后存到本地
+	git remote -v  //在本地查询远程地址
+	git remote add origin https://github.com/walden94me/linuxLearning.git   //添加远程地址。orgin 为 https 地址的别名
+2.推送到远程库
+	git push [地址别名] [本地分支名]
+	git push origin master
+3.克隆操作
+	a.新建一个目录，进入新目录
+	b.执行 git clone [远程库地址]
+	克隆操作作用：
+		1.将远程库完整地克隆的本地
+		2.创建 orgin 远程地址别名
+		3.初始化本地库
+4.拉取操作
+	pull= fecth + merge
+	git fecth [远程库地址别名] [远程分支名]
+	git merge [远程库地址别名/远程分支名]
+	
